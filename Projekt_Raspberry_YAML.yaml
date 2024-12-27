@@ -1,0 +1,18 @@
+mqtt:
+  sensor:
+    - name: "Stan bramy"
+      state_topic: "home/gate/status"
+      value_template: "{{ value }}"
+      icon: mdi:gate
+
+  switch:
+    - name: "Wentylator Kuchnia"
+      command_topic: "home/kitchen/fan1"
+      state_topic: "home/gate/status"
+      payload_on: "ON"
+      payload_off: "OFF"
+    - name: "Wentylator Garaż"
+      command_topic: "home/garage/fan2"
+      state_topic: "home/gate/status"
+      payload_on: "ON"
+      payload_off: "OFF"
